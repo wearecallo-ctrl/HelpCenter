@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+                
+                
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: "Poppins", sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #ffffff;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #a1fc03;
+		}
+
+		.border {
+			border: 1px solid #000000;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #000000;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+		<a id="1" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-question"></i> What is Callo?</a>
+		<a id="2" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-gavel"></i> House Rules</a>
+                <a id="3" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> Callo Library</a>
+                <a id="4" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lock"></i> Privacy Policy</a>
+		<a id="5" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-file-pen"></i> Terms of Service</a>
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == '1')
+				window.open("https://wearecallo.notion.site/What-is-Callo-81750480847a4b60a2286bd757899872?pvs=74", '_parent').focus();
+		        else if (id == '2')
+				window.open("https://wearecallo.notion.site/Callo-House-Rules-df6102255b6a44a7bfd47a8cf4bfbe55?pvs=4", '_parent').focus();
+                        else if (id == '3')
+				window.open("https://wearecallo.notion.site/Callo-Library-4482b56bad6b4d6da4a84730f74fbb33", '_parent').focus();
+                        else if (id == '4')
+				window.open("https://wearecallo.notion.site/Privacy-Policy-acd232fc03d445be8ea09d4300985efe", '_parent').focus();
+			else if (id == '5')
+				window.open("https://wearecallo.notion.site/Terms-of-Service-c21fc725aa0048dbbb7b17d29c4dd31f?pvs=74", '_parent').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>

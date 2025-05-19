@@ -1,99 +1,172 @@
 <!DOCTYPE html>
-<html>
+
+<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-	<!-- Google Font -->
+    body {
+      display: grid;
+      font-family: "Poppins", sans-serif;
+      place-items: center;
+    }
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-                
-                
-	<!-------->
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
 
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
+    }
+
+    .icon {
+      /* Change the icon size here */
+      font-size: 2em;
+      /* Change the icons colours here*/
+      color: #7a7a7a
+    }
 
 
-		.navMenu {
-			font-family: "Poppins", sans-serif;
-			padding: 8px;
-			text-align: center;
-			margin: 7px auto;
-			width: fit-content;
-		}
+    .blog:hover {
+      color: #ffbd2f;
+    }
 
-		.navMenu a {
-			color: #ffffff;
-			text-decoration: none;
-			text-transform: uppercase;
-			display: inline-block;
-			padding: 6px;
-		}
+    .email:hover {
+      color: #23c8c8;
+    }
 
-		.background {
-			background-color: #a1fc03;
-		}
+    .facebook:hover {
+      color: #4267B2;
+    }
 
-		.border {
-			border: 1px solid #000000;
+    .instagram:hover {
+      color: rgb(241, 102, 217);
+    }
 
-		}
+    .linkedin:hover {
+      color: #0e76a8;
+    }
 
-		.navMenu a:hover {
+    .twitter:hover {
+      color: #26a7de;
+    }
 
-			color: #000000;
-		}
-	</style>
+    .reddit:hover {
+      color: #ff4500;
+    }
+
+    .tiktok:hover {
+      color: #ff0050;
+    }
+
+    .youtube:hover {
+      color: #FF0000;
+    }
+
+    .pinterest:hover {
+      color: #c8232c;
+    }
+
+    .telegram:hover {
+      color: #2AABEE;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+
 </head>
 
 <body>
 
-	<nav class="navMenu  border background">
-		<a id="1" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-question"></i> What is Callo?</a>
-		<a id="2" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-gavel"></i> House Rules</a>
-                <a id="3" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> Callo Library</a>
-                <a id="4" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lock"></i> Privacy Policy</a>
-		<a id="5" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-file-pen"></i> Terms of Service</a>
+  <body>
+
+    <div class="wrapper">
+
+      <!-- Start facebook Icon -->
+      <div id="facebook" onclick="navigate(this.id)" class="social">
+        <span class="icon facebook"><i class="fab fa-facebook"></i></span>
+      </div>
+      <!-- End facebook Icon -->
+
+      <!-- Start instagram Icon -->
+      <div id="instagram" onclick="navigate(this.id)" class="social">
+        <span class="icon instagram"><i class="fab fa-instagram"></i></span>
+      </div>
+      <!-- End instagram Icon -->
+
+      <!-- Start linkedin Icon -->
+      <div id="linkedin" onclick="navigate(this.id)" class="social">
+        <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
+      </div>
+      <!-- End linkedin Icon -->
 
 
-	</nav>
+
+    </div>
 
 
-	<script>
-
-		let direction = "vertical";
-		if (direction === "vertical") {
-			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
-		}
 
 
-		function navigate(id) {
+    <script>
+      function navigate(id) {
 
-			if (id == '1')
-				window.open("https://wearecallo.notion.site/What-is-Callo-81750480847a4b60a2286bd757899872?pvs=74", '_parent').focus();
-		        else if (id == '2')
-				window.open("https://wearecallo.notion.site/Callo-House-Rules-df6102255b6a44a7bfd47a8cf4bfbe55?pvs=4", '_parent').focus();
-                        else if (id == '3')
-				window.open("https://wearecallo.notion.site/Callo-Library-4482b56bad6b4d6da4a84730f74fbb33", '_parent').focus();
-                        else if (id == '4')
-				window.open("https://wearecallo.notion.site/Privacy-Policy-acd232fc03d445be8ea09d4300985efe", '_parent').focus();
-			else if (id == '5')
-				window.open("https://wearecallo.notion.site/Terms-of-Service-c21fc725aa0048dbbb7b17d29c4dd31f?pvs=74", '_parent').focus();
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
 
-		}
-	</script>
+        if (id === "blog")
+          window.open("https://blog.shorouk.dev", '_blank').focus(); //Add the url to your blog
+
+        else if (id === "email") {
+          window.open("mailto:someone@yoursite.com", '_blank').focus(); //Add your email after "mailto:""
+        }
+
+        else if (id === "facebook") {
+          window.open("https://www.facebook.com/wearecallo", '_blank').focus(); //Add the url to your facebook page or account
+        }
+        else if (id === "instagram") {
+          window.open("https://www.instagram.com/wearecallo/", '_blank').focus(); //Add the url to your instagram account
+        }
+        else if (id === "linkedin") {
+          window.open("https://www.linkedin.com/company/wearecallo/", '_blank').focus(); //Add the url to your pinterest account
+        }
+        else if (id === "twitter") {
+          window.open("https://twitter.com/", '_blank').focus(); //Add the url to your pinterest account
+        }
+        else if (id === "reddit") {
+          window.open("https://www.reddit.com/", '_blank').focus(); //Add the url to your reddit account
+        }
+        else if (id === "tiktok") {
+          window.open("https://www.tiktok.com/", '_blank').focus(); //Add the url to your tiktok account
+        }
+        else if (id === "youtube") {
+          window.open("https://www.youtube.com/", '_blank').focus(); //Add the url to your youtube account
+        }
+        else if (id === "pinterest") {
+          window.open("https://www.pinterest.com/", '_blank').focus(); //Add the url to your pinterest account
+        }
+        else if (id === "telegram") {
+          window.open("https://web.telegram.org/", '_blank').focus(); //Add the url to your telegram account
+        }
+      }
+
+    </script>
 
 
-</body>
+
+  </body>
 
 </html>
